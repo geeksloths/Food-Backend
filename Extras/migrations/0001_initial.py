@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('uuid', models.CharField(default=Utils.functions.get_uuid, editable=False, max_length=15, unique=True)),
                 ('name', models.CharField(max_length=50)),
-                ('icon', models.FileField(upload_to=Extras.models.get_extra_image, validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['svg', 'jpg', 'png'])])),
+                ('icon', models.FileField(upload_to=Extras.models.get_extra_icon, validators=[django.core.validators.FileExtensionValidator(allowed_extensions=['svg', 'jpg', 'png'])])),
                 ('price', models.IntegerField()),
                 ('stack', models.IntegerField(default=1000)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
